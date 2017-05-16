@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/web/Error.jsp</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Model/DatabaseConnection.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Admin/ReturnBookFromEnrlServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Admin/AddBookServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Model/QRCodeGenerator.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Commonservlet/ReissueBookFromEnrlServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/web/index.html</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Admin/RemoveBookServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Admin/IssueBookServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Student/SearchBookServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Commonservlet/BookDetailsServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Student/StudentLoginServlet.java</file>
+            <file>file:/F:/Servlet/NetBeansProjects/e-Library/src/java/Admin/AdminLoginServlet.java</file>
+        </group>
+    </open-files>
+</project-private>

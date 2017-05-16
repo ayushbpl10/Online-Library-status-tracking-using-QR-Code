@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>E-Library</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        
+        <script>
+            history.pushState(null, document.title, location.href);
+            window.addEventListener('popstate', function (event)
+            {
+              history.pushState(null, document.title, location.href);
+            });
+        </script>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </head>
+    <body style="background-image: url('./back.jpg'); background-repeat: no-repeat; background-size: 100%;">
+        <h2 class="text-center" style="color: yellow">ONLINE LIBRARY STATUS TRACKING USING QR Code</h2>
+        <div class="text-center" style="">
+            <form style="display : inline-block; text-align: left; margin: 150px; " name="Login" action = "AdminLoginServlet" method="post" novalidate>
+                <div class="form-group" id="LoginForm">
+                    <b style="color: blue">Admin Login </b><br>
+                    <div class="loginbox">
+                    Enter username: <input class="form-control" type="text" name="username"><br>
+                    </div>
+                    <div class="loginbox">
+                    Enter password: <input class="form-control" type="password" name="pwd"><br>
+                    </div>
+                    <input class="btn-login btn btn-info" type="submit" value="Login">
+
+                </div>
+            </form>
+            
+            <div style="display : inline-block; border-right: solid red; height : 215px; position: relative; top: 20px;"></div>
+
+            <form style="display : inline-block; text-align: left; margin: 150px;" name="Login" action = "StudentLoginServlet" method="post" novalidate>
+                <div class="form-group" id="LoginForm">
+                    <b style="color: blue">Student Login </b><br>
+                    <div class="loginbox">
+                    Enter username: <input class="form-control" type="text" name="username"><br>
+                    </div>
+                    <div class="loginbox">
+                    Enter password: <input class="form-control" type="password" name="pwd"><br>
+                    </div>
+                    <input class="btn-login btn btn-info" type="submit" value="Login">
+
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
