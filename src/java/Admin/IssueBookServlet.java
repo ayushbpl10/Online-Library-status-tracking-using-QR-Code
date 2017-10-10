@@ -18,12 +18,15 @@ package Admin;
  */
 
 import Model.DatabaseConnection;
+import Model.EmailSender;
+import Model.SmsSender;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import java.sql.SQLException;
 
@@ -111,7 +114,26 @@ public class IssueBookServlet extends HttpServlet {
                                     {
                                                             
                                                           
-                                                            
+                                                                ps = conn.prepareStatement("select * from StudentDetails where enrollmentno=?");
+                                                                ps.setString(1, issuedto);
+                                                                ResultSet rs = ps.executeQuery();
+                                                                if (rs.next()) {
+                                                                    String email = rs.getString("email");
+                                                                    String Subject = "Book Issued";
+                                                                    String Message = " Hello "+rs.getString("username")+", \n You have issued a book from library. \n Book Details are: \n Book Name: "+bookname+" \n Book Author: "+authorname+" \n Regards, \n Library Administrator";
+                                                                    EmailSender e = new EmailSender();
+                                                                    boolean result;
+                                                                    result = e.SendMail(email, Subject, Message);
+                                                                   
+                                                                    if(result == true){
+                                                                        
+                                                                    String mobile = Long.toString(rs.getLong("mobile"));
+                                                                    String SMS = "Book%20issued%0ABook%20Name%20%20"+bookname;
+                                                                    SmsSender sms = new SmsSender();
+                                                                    result = sms.SendSMS(mobile, SMS);
+                                                                        System.out.println("sms: "+result);
+                                                                    }
+                                                                    }
                                                                 
                                                                 JSONObject obj = new JSONObject();  
                                                                 

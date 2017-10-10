@@ -121,16 +121,19 @@ function SearchBook() {
                         
                         row.append($("<td/>").text(r.bookname));
                         row.append($("<td/>").text(r.authorname));
-                        if(r.issuedto == null)
-                        row.append($("<td/>").text("Available"));
-                        else
-                            row.append($("<td/>").text(" Not Available"));
+                        if(r.issuedto === null){
+                            row.append($("<td/>").text("Available"));
+                        }
+                        else{
+                            row.append($("<td/>").text("Not Available"));
+                        }
+                            
                     
                     table.append(row);
                 });
      
                 $("#SearchBookResult").append(table);
-            }
+                }
             });
         }     
 

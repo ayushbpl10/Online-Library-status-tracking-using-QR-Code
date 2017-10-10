@@ -144,6 +144,8 @@ function AddBookToDb(){
         var enrl_to_issue = $("#enrl_to_issue").val();
         
         
+        
+        
    
         // Returns successful data submission message when the entered information is stored in database.
         if(bid_to_issue.length==0||bookname_to_issue.length==0||authorname_to_issue.length==0||enrl_to_issue.length==0)
@@ -152,26 +154,33 @@ function AddBookToDb(){
         }
         else
         {
-            // AJAX Code To Submit Form.
-            $.ajax({
-            type: "POST",
-            url: "IssueBookServlet",
-            data: {
-                        'bid' : bid_to_issue,
-                        'bookname' : bookname_to_issue,
-                        'authorname' : authorname_to_issue,
-                        'enrl_no' : enrl_to_issue
-                   },
-            cache: false,
-            success: function(result){
-                alert(result.success);
+            if(enrl_to_issue.length <= 11){
+                alert("Please provide the correct Enrollment Number.");
             }
-            });
-        }     
+            else{
+                // AJAX Code To Submit Form.
+                    $.ajax({
+                    type: "POST",
+                    url: "IssueBookServlet",
+                    data: {
+                                'bid' : bid_to_issue,
+                                'bookname' : bookname_to_issue,
+                                'authorname' : authorname_to_issue,
+                                'enrl_no' : enrl_to_issue
+                           },
+                    cache: false,
+                    success: function(result){
+                        alert(result.success);
+                    }
+                    });
+                }     
 
 
+        }
+            
+    }            
     
-}
+
 
   function ReturnFromEnrlNo(){
       

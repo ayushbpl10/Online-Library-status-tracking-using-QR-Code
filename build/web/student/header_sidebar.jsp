@@ -169,9 +169,11 @@
                             <li class="">
                                 <a style="cursor: pointer;"><div onclick="SearchBook()"><i class="fa fa-fw fa-book"></i>Search Book</div></a>
                             </li>
-                             <li class="">
+                            <!--
+                            <li class="">
                                 <a style="cursor: pointer;"><div onclick="ReIssueBook()"><i class="fa fa-fw fa-book"></i>ReIssue Book</div></a>
                             </li>
+                            -->
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

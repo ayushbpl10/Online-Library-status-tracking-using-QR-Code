@@ -14,7 +14,7 @@
     <body>
         <label>Search by bookname :</label>
                     <div>
-                        <input id="searchbookname" type="text" placeholder="Enter Bookname" onkeyup="SearchByBookname()">
+                        <input id="searchbookname" class="form-control" type="text" placeholder="Enter Bookname" onkeyup="SearchByBookname()">
                         
                     </div>
         

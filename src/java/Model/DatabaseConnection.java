@@ -24,7 +24,7 @@ public class DatabaseConnection {
             throw new ServletException(cnf.toString());
         }
         try {
-            //conn = DriverManager.getConnection("jdbc:mysql://localhost/libraryu_root?autoReconnect=true", "libraryu_ayush", "Ayushbpl10@gmail.com");
+            //conn = DriverManager.getConnection("jdbc:mysql://localhost/libraryu_root?autoReconnect=true&useSSL=false", "libraryu_ayush", "Ayushbpl10@gmail.com");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3308/Library", "root", "ayush");
             System.out.println("Connected successfully with database");
             return conn;
